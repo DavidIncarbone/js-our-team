@@ -86,12 +86,14 @@ function addMembers(event) {
   let name = document.getElementById("name").value;
   let role = document.getElementById("role").value;
   let email = document.getElementById("email").value;
-  console.log(name, role, email);
+  let img = document.getElementById("img").value
+  console.log(name, role, email, img);
 
   const newMember = {
     name,
     role,
-    email
+    email,
+    img
   };
 
   teamMembers.push(newMember);
