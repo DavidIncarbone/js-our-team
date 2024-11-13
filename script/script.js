@@ -43,7 +43,7 @@ const teamMembers = [
 // Call functions and get elements
 
 printCards();
-const form = document.querySelector("form");
+let form = document.querySelector("form");
 form.addEventListener("submit", addMembers);
 
 console.log(form);
@@ -100,6 +100,7 @@ function addMembers(event) {
   console.log(newMember);
   console.log(teamMembers);
   printCards();
+
 }
 
 
