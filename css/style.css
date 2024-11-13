@@ -9,7 +9,11 @@ img {
 
 .img-container {
 
-    width: 35%;
+    width: 160px;
+}
+
+h1 {
+    color: blue;
 }
 
 /* * {

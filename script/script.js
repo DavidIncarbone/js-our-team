@@ -42,3 +42,34 @@ const teamMembers = [
 
 
 
+let template = "";
+
+for (let value of teamMembers) {
+
+  template += `
+                 <div class=" d-flex col-lg-4 col-md-6 col-sm-12">
+                     <div class="img-container">
+                         <img src="./${value.img}" alt="${value.name}">
+                     </div>
+                     <div class="w-100 ps-3 py-3 text-bg-dark">
+                         <h4 class="text-uppercase">${value.name}</h4>
+                         <h5>${value.role}</h5>
+                         <div class="text-info">${value.email}</div>
+                     </div>
+                 </div>
+
+            `
+}
+console.dir(teamMembers);
+
+const mainContent = document.querySelector(".row");
+console.log(mainContent);
+mainContent.innerHTML = template;
+
+
+
+
+
+
+
+
