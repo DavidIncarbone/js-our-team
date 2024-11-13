@@ -40,13 +40,25 @@ const teamMembers = [
   }
 ];
 
-// cycle "for of" into Array and add template to index.html
+// Call functions and get elements
 
-let template = "";
+printCards();
+const form = document.querySelector("form");
+form.addEventListener("submit", addMembers);
 
-for (let value of teamMembers) {
+console.log(form);
 
-  template += `
+
+// FUNCTIONS
+
+// print cards
+
+function printCards() {
+  let template = "";
+
+  for (let value of teamMembers) {
+
+    template += `
                  <div class=" d-flex col-lg-4 col-md-6 col-sm-12">
                      <div class="img-container">
                          <img src="./${value.img}" alt="${value.name}">
@@ -59,12 +71,43 @@ for (let value of teamMembers) {
                  </div>
 
             `
+  }
+  const mainContent = document.querySelector(".row");
+  console.log(mainContent);
+  mainContent.innerHTML = template;
 }
 console.dir(teamMembers);
 
-const mainContent = document.querySelector(".row");
-console.log(mainContent);
-mainContent.innerHTML = template;
+// add members
+
+function addMembers(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  let name = document.getElementById("name").value;
+  let role = document.getElementById("role").value;
+  let email = document.getElementById("email").value;
+  console.log(name, role, email);
+
+  const newMember = {
+    name,
+    role,
+    email
+  };
+
+  teamMembers.push(newMember);
+  console.log(newMember);
+  console.log(teamMembers);
+  printCards();
+}
+
+
+
+
+
+
+
+
+
 
 
 
