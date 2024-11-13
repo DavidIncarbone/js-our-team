@@ -40,7 +40,7 @@ const teamMembers = [
   }
 ];
 
-
+// cycle "for of" into Array and add template to index.html
 
 let template = "";
 
@@ -65,6 +65,8 @@ console.dir(teamMembers);
 const mainContent = document.querySelector(".row");
 console.log(mainContent);
 mainContent.innerHTML = template;
+
+
 
 
 
